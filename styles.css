@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+}
+
+html,body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  height: 100%;
+}
+
+/* Style the header */
+header {
+  background-color: #fff;
+  padding: 5px 20px 5px 20px;
+  margin: 1px;
+  height: 10%;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: black;
+}
+
+.logo {
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  max-width: 50px;
+  height: auto;
+  align-self: center;
+}
+
+.logo-container {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-container > p {
+	margin-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  align-self: center;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+  height: 80%;
+  background-color: #E95354;
+  text-align: center;
+}
+
+
+/* Style the content */
+article {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  color: white;
+  padding: 10px;
+}
+
+article::before {    
+  content: "";
+  background: url("assets/bg_gorontalo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  opacity: 0.2;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+h2, p, h1 {
+  position: relative;
+}
+
+/* Style the footer */
+footer {
+  background-color: #fff;
+  height: 7%;
+  padding: 5px 10px 5px 10px;
+  text-align: center;
+  color: black;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+footer > p {
+	font-size: 12px;
+  font-weight: bold;
+  align-self: center;
+}
+
+footer > p > span {
+	font-size: 10px;
+}
+
+.judul-large {
+	font-size: 3rem;
+  line-height: 2rem;
+  font-weight: bold;
+}
+
+.judul-medium {
+	font-size: 2rem;
+}
+
+.teks {
+  align-self: center;
+	padding-left: 5px;
+	padding-right: 5px;
+  white-space: pre-line;
+  font-weight: bolder;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media only screen and (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 655px) {
+  .judul-large {
+    font-size: 2.5rem;
+    line-height: 1rem;
+  }
+  
+  .judul-medium {
+    font-size: 1.5rem;
+  }
+  
+  .teks {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .judul-large {
+    font-size: 2.2rem;
+    line-height: 1rem;
+  }
+  
+  .judul-medium {
+    font-size: 1.2rem;
+  }
+  
+  .teks {
+    font-size: 0.85rem;
+  }
+
+  .logo-container > p {
+    font-size: 13px;
+  }
+
+  article {
+    padding: 0px;
+  }
+}
+
+@media only screen and (max-width: 412px) {
+  header {
+    height: 8%;
+  }
+
+  section {
+    height: 84%;
+  }
+}
+
+@media only screen and (max-width: 396px) {
+  header {
+    height: 8%;
+    padding: 1px 18px 1px 18px;
+  }
+
+  section {
+    height: 85%;
+  }
+
+  footer {
+    padding: 3px 10px 3px 10px;
+  }
+
+  .judul-large {
+    font-size: 2rem;
+    line-height: 1rem;
+  }
+  
+  .judul-medium {
+    font-size: 1rem;
+  }
+  
+  .teks {
+    font-size: 0.8rem;
+  }
+
+  .logo-container > p {
+    font-size: 12px;
+  }
+
+  footer > p {
+    font-size: 10px;
+  }
+  
+  footer > p > span {
+    font-size: 8px;
+  }
+
+  .logo {
+    max-width: 40px;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .judul-large {
+    font-size: 1.5rem;
+  }
+  
+  .judul-medium {
+    font-size: 0.8rem;
+  }
+  
+  .teks {
+    font-size: 0.7rem;
+  }
+
+  .logo-container > p {
+    font-size: 11px;
+  }
+
+  .logo {
+    max-width: 35px;
+  }
+
+  footer > p {
+    font-size: 9px;
+  }
+  
+  footer > p > span {
+    font-size: 7px;
+  }
+}
